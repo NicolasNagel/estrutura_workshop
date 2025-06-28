@@ -1,20 +1,19 @@
-import os
 import glob
+import os
+from typing import List
 
 import pandas as pd
 
-from typing import List
-
-"""
-Função que lê dados de
-uma pasta de arquivos 'data/input' e consolida em um arquivo .xlsx
-
-args: input_path(str): caminho da pasta com os arquivos
-
-return: lista de dataframes
-"""
 
 def extract_from_excel(path: str) -> List[pd.DataFrame]:
+    """
+    Função que lê dados de
+    uma pasta de arquivos 'data/input' e consolida em um arquivo .xlsx
+
+    args: input_path (str): caminho da pasta com os arquivos
+
+    return: lista de dataframes
+    """
     all_files = glob.glob(os.path.join(path, "*.xlsx"))
 
     data_frame_list = []

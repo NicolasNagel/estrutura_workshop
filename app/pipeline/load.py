@@ -1,5 +1,6 @@
-import pandas as pd
 import os
+
+import pandas as pd
 
 
 def load_excel(data_frame: pd.DataFrame, output_path: str, file_name: str) -> str:
